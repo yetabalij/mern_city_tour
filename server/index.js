@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import cors from "cors";
 import morgan from "morgan";
 import userRouter from "./routes/user.js";
-import { signin } from "./controllers/user.js";
+import tourRouter from "./routes/tours.js";
 
 const port = 5000;
 
@@ -17,7 +17,7 @@ app.use(express.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
 
 app.use("/users", userRouter);
-app.use("/users", signin);
+app.use("/tour", tourRouter);
 
 const MONGOODB_URL =
   "mongodb+srv://Ermias:ermias@cluster0.4lzqk.mongodb.net/tour_db?retryWrites=true&w=majority";
