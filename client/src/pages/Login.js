@@ -23,7 +23,7 @@ const initialSate = {
 const Login = () => {
   const [formvalue, setformvalue] = useState(initialSate);
   const { loading, error } = useSelector((state) => ({ ...state.auth }));
-  console.log(error);
+  //console.log(error);
   const { email, password } = formvalue;
   const dispatch = useDispatch();
   const navigate = useNavigate();
